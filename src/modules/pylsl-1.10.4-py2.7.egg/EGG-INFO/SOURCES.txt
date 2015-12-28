@@ -1,0 +1,12 @@
+DESCRIPTION.rst
+LICENSE
+MANIFEST.in
+setup.cfg
+setup.py
+pylsl/__init__.py
+pylsl/liblsl64.dll
+pylsl/pylsl.py
+pylsl.egg-info/PKG-INFO
+pylsl.egg-info/SOURCES.txt
+pylsl.egg-info/dependency_links.txt
+pylsl.egg-info/top_level.txt
