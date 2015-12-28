@@ -2,7 +2,7 @@ from framework.latentmodule import LatentModule
 from serial import *
 from direct.gui.OnscreenImage import OnscreenImage
 import io, os, glob
-# import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 from numpy import *
 import time
 import pylsl.pylsl as pylsl
@@ -53,7 +53,7 @@ class Main (LatentModule):
         image_time=[] # get time
 
 
-        ti=0.125 # timer interval
+        ti=0.3 # timer interval
         for i in range(0,len(data)-1):
             image_time.append(time.time())
             if i != 0:
@@ -89,13 +89,13 @@ class Main (LatentModule):
 
         # mac
 
-        f1=open('/Users/Villa/Dropbox/python/labstreaminglayer-master/App/SNAP/src/studies'
-                   '/trial1/RSVP.txt','rb')
+        # f1=open('/Users/Villa/Dropbox/python/labstreaminglayer-master/App/SNAP/src/studies'
+        #            '/trial1/RSVP.txt','rb')
 
         # win
 
-        # f1=open('C:\\Users\\Villa_000\\Dropbox\\python\\labstreaminglayer-master\\App\\SNAP\\src\\studies'
-        #        '\\trial1\\RSVP.txt','rb')
+        f1=open('C:\\Users\\Villa_000\\Dropbox\\python\\labstreaminglayer-master\\App\\SNAP\\src\\studies'
+               '\\trial1\\RSVP.txt','rb')
 
 
         data,marker1,num=self.ReadData(f1)
@@ -108,13 +108,13 @@ class Main (LatentModule):
 
         # mac
 
-        f2=open('/Users/Villa/Dropbox/python/labstreaminglayer-master/App/SNAP/src/studies'
-               '/trial2/RSVP.txt','rb')
+        # f2=open('/Users/Villa/Dropbox/python/labstreaminglayer-master/App/SNAP/src/studies'
+        #        '/trial2/RSVP.txt','rb')
 
         # win
 
-        # f2=open('C:\\Users\\Villa_000\\Dropbox\\python\\labstreaminglayer-master\\App\\SNAP\\src\\studies'
-        #        '\\trial2\\RSVP.txt','rb')
+        f2=open('C:\\Users\\Villa_000\\Dropbox\\python\\labstreaminglayer-master\\App\\SNAP\\src\\studies'
+               '\\trial2\\RSVP.txt','rb')
 
         data,marker2,num=self.ReadData(f2)
         self.write('Trial2',duration=2)
@@ -128,7 +128,7 @@ class Main (LatentModule):
 
 
 
-        # self.PlotTime([time_interval1,time_interval2])
+        #self.PlotTime([time_interval1,time_interval2])
 
 
 

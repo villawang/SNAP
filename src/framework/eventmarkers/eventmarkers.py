@@ -61,7 +61,7 @@ def send_marker(markercode):
 
     global marker_log
     if marker_log is not None:
-        marker_log.write(repr(time.time()) + ': ' + str(markercode) + '\n')
+        marker_log.write(repr(time.time()) + '\t ' + str(markercode) + '\n')
 
     global river_backend
     if river_backend is not None:
